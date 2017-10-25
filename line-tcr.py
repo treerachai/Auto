@@ -45,7 +45,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" [sai] BOT Menu V.3  􀔃􀄆red check mark􏿿
+helpMessage =""" [tree] BOT Menu V.3  􀔃􀄆red check mark􏿿
 
 􀔃􀅕red arrow right􏿿 Command Public
 [Me]       Cek Akun Sendiri
@@ -103,7 +103,7 @@ Gmid = ko.getProfile().mid
 Hmid = ke.getProfile().mid
 Imid = ku.getProfile().mid
 
-Bots=["ubcd678c1e478baff8a4c453e52049dbf","ufe492c53d99b3db04860ae2ae1edb40f","u0cf4fcf36d316598037300c6fe3f436a","u35b935b4c4ecd441459a2477b9825b05","u8b5cfdcb6eddb607e5a4520774af06bc","uf3aab87fdb15cbeec5fd473414baccf8","ub02618386ec01aa7c996328f8953a46a","u4e864d809b7f351b3bc184cef26995a7","u2f78a375c41e819a0f83ac825dca512e","u1f0435d2ebb05b74faedfd1478b4f4bf"]
+Bots=["u9489706a45fcf78bea076c6b77f7067d','ucd886b532f581aa4de98af5898719392','uf0df255db02eaad40927284f5ccf5a7d'"]
 admin
     'contact':True,
     'autoJoin':True,
@@ -120,15 +120,15 @@ admin
     "dblack":False,
     "clock":False,
     "cName":" ",
-    "cName2":"sai2 ",
-    "cName3":"sai3 ",
-    "cName4":"sai4 ",
-    "cName5":"sai5 ",
-    "cName6":"sai6 ",
-    "cName7":"sai7 ",
-    "cName8":"sai8 ",
-    "cName9":"sai9 ",
-    "cName10":"sai10 ",
+    "cName2":"tree2 ",
+    "cName3":"tree3 ",
+    "cName4":"tree4 ",
+    "cName5":"tree5 ",
+    "cName6":"tree6 ",
+    "cName7":"tree7 ",
+    "cName8":"tree8 ",
+    "cName9":"tree9 ",
+    "cName10":"tree10 ",
     "blacklist":{"on":True,"members":1},
     "wblacklist":False,
     "dblacklist":False,
@@ -2034,7 +2034,7 @@ def bot(op):
     #-------------Fungsi Leave Group Finish---------------#
     
     #-------------Fungsi Tag All Start---------------#
-            elif msg.text in ["SAI","sai","ทรายแทก"]:
+            elif msg.text in ["Tree","tree","แทก"]:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
 
