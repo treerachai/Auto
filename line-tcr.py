@@ -48,35 +48,47 @@ sys.setdefaultencoding('utf-8')
 helpMessage =""" [tree] BOT Menu V.3  􀔃􀄆red check mark􏿿
 
 􀔃􀅕red arrow right􏿿 Command Public
-[Me]       Cek Akun Sendiri
-[My mid]   Cek Akun Mid
-[Bot?]     Cek Akun Bot
-[Id Group] Cek Id Group
-[Ginfo]    Group Info
-[Mid RA]   Cek All mid Bot
-[RA 1/2/3/4] Cek Mid Bot
-[Respon]   Cek Respon Bot
-[Speedbot] Cek Kecepatan Bot
-[Up]       Fungsi Spam Chat
-[Tagall]   Mention Semua User
-[Banlist]  Cek List Akun Banned
-[Gn namagroup] Ganti Nama Group
-[Cancel] Cancel User Masuk Group
-[Set View] Cek Privasi Group
-[Open Url]  Membuka Url Group
-[Close Url] Menutup Url Group
+¤ Me       [Check Account Own]
+¤ My mid   [Check Accoun Mid]
+¤ Bot?     [Check Accoun Bot]
+¤ Id Group [Check Id Group]
+¤ Ginfo    [Group Info]
+¤ Mid Tr   [Check All mid Bot]
+¤ Tr 1/2/3/4 [Check Mid Bot]
+¤ Respon   [Check Respon Bot]
+¤ Speedbot [Check Speed Bot]
+¤ Up       [Function Spam Chat]
+¤ Tagall   [Mention All User]
+¤ Banlist  [Check List Accoun Banned]
+¤ Gn namegroup [Replace Name Group]
+¤ Cancel  [Cancel User Sign in Group]
+¤ Set View  [Check Privacy Group]
+¤ Open Url  [Open Url Group]
+¤ Close Url [Close Url Group]
 
 􀔃􀅕red arrow right􏿿 Command Private
-[Set group] Menggatur Privasi Grup
-[Banned @] Bann Target 
-[Unban @]  Unbann Target
-[Kill @] Kick Target Bann
-[Nk @]   Kick Target User
-[Invite mid] Invite Via Mid
-[Kick mid] Kick Via mid
-[Ayo masuk] Invite Semua Bot
-[_namabot join] Invite Bot
-[Bye _namabot]  Leave Bot
+¤ Set group  [Organize Privacy Group]
+¤ Banned @  [Banned Target] 
+¤ Unban @   {Unbann Target}
+¤ Kill @  [Kick Target Bann]
+¤ Nk @    [Kick Target User]
+¤ Invite mid [Invite Via Mid]
+¤ Kick mid  [Kick Via mid]
+¤ Ayo masuk [Invite Semua Bot]
+¤_namabot join [Invite Bot]
+¤ Bye _namabot [Leave Bot]
+"""
+
+Setgroup =""" Privasi Menu V.1 􀔃􀄆red check mark􏿿
+
+[Protect Group]
+-- Gr on/off
+[Mid Via Contact]
+ -- Contact on/off
+[Cancel All Invited]
+-- Cancl on/off
+[No Joinned]
+-- Joinn on/off
 """
 
 Setgroup =""" Privasi Menu V.1 􀔃􀄆red check mark􏿿
