@@ -5,41 +5,11 @@ from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re
 
-#kk = LINETCR.LINE()
-#kk.login(qr=True)
-#kk.loginResult()
-
 cl = LINETCR.LINE()
 cl.login(qr=True)
+cl.loginResult()
 
-ki = LINETCR.LINE()
-ki.login(qr=True)
-
-kk = LINETCR.LINE()
-kk.login(qr=True)
-
-kc = LINETCR.LINE()
-kc.login(qr=True)
-
-ks = LINETCR.LINE()
-ks.login(qr=True)
-
-ka = LINETCR.LINE()
-ka.login(qr=True)
-
-kb = LINETCR.LINE()
-kb.login(qr=True)
-
-ko = LINETCR.LINE()
-ko.login(qr=True)
-
-ke = LINETCR.LINE()
-ke.login(qr=True)
-
-ku = LINETCR.LINE()
-ku.login(qr=True)
-
-cl = ki = kk = kc = ks = ka = kb = ko = ke = ku
+ki = kk = kc = cl 
 
 print "login success"
 reload(sys)
@@ -90,21 +60,15 @@ Setgroup =""" Privasi Menu V.1 􀔃􀄆red check mark􏿿
 [No Joinned]
 -- Joinn on/off
 """
-KAC=[cl,ki,kk,kc,ks,ka,kb,ko,ke,ku]
-DEF=[ka,kb,ko,ke,ku]
+KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
-Dmid = ks.getProfile().mid
-Emid = ka.getProfile().mid
-Fmid = kb.getProfile().mid
-Gmid = ko.getProfile().mid
-Hmid = ke.getProfile().mid
-Imid = ku.getProfile().mid
 
-Bots=["ubcd678c1e478baff8a4c453e52049dbf","ufe492c53d99b3db04860ae2ae1edb40f","u0cf4fcf36d316598037300c6fe3f436a","u35b935b4c4ecd441459a2477b9825b05","u8b5cfdcb6eddb607e5a4520774af06bc","uf3aab87fdb15cbeec5fd473414baccf8","ub02618386ec01aa7c996328f8953a46a","u4e864d809b7f351b3bc184cef26995a7","u2f78a375c41e819a0f83ac825dca512e","u1f0435d2ebb05b74faedfd1478b4f4bf"]
-admin
+Bots=[mid,Amid,Bmid,Cmid]
+admin=["ubcd678c1e478baff8a4c453e52049dbf"]
+wait = {
     'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
