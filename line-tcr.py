@@ -115,8 +115,9 @@ Gmid = ko.getProfile().mid
 Hmid = ke.getProfile().mid
 Imid = ku.getProfile().mid
 
-Bots=["u9489706a45fcf78bea076c6b77f7067d','ucd886b532f581aa4de98af5898719392','uf0df255db02eaad40927284f5ccf5a7d'"]
-admin
+Bots=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"]
+admin=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"]
+wait = {
     'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
