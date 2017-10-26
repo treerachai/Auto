@@ -3270,7 +3270,7 @@ def bot(op):
                     pass
 					
         if op.param1 in autocancel:
-			OWN = 
+			OWN = " "
 			if op.param2 in OWN:
 				pass
 			else:
@@ -3289,7 +3289,7 @@ def bot(op):
 				json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
 #-----------------------------
         if op.type == 32:
-			OWN = 
+			OWN = " "
 			if op.param2 in OWN:
 				pass
 			else:
