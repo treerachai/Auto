@@ -60,7 +60,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.1
 ¤ Unban = [Dalete blacklist]
 ¤ Banlist = [Check blacklist]
 
--⚠™[ƧЄƬ]:ƇƠMMƛƝƊƧ ƧЄƬ. -
+- Command Admin -
 ¤ Contact: on/off 
 ¤ Auto join: on/off 
 ¤ Cancel Invite: 1 on/off
@@ -70,7 +70,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.1
 ¤ Auto add: on/off
 ¤ Auto like: on/off
 	
--⚠™ƇƠMMƛƝƊƧ ƖƝ ƬHЄ ƓƦƠƲƤƧ. ~~~~
+- Command Kicker ~~~~
 ¤ Ban   =[Banned Target]
 ¤ Unban =[Unbann Target]
 ¤ Urlon  = [Open urL]
@@ -85,7 +85,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.1
 ¤ Dead = "Kick Blacklist"
 
 """
-helpMessage2 ="""-⚠™ -
+helpMessage2 =""" Command Protect -
 
 ¤ Protect: on/off
 ¤ Block url: on/off
