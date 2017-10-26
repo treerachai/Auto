@@ -70,7 +70,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.1
 ¤ Auto add: on/off
 ¤ Auto like: on/off
 	
-- Command Kicker ~~~~
+- Command Set ~~~~
 ¤ Ban   =[Banned Target]
 ¤ Unban =[Unbann Target]
 ¤ Urlon  = [Open urL]
