@@ -39,18 +39,18 @@ helpMessage ="""
 ¤ [Mc "mid"]: convert mid to contact
 ¤ [Groups]
 ¤ [Like:on/off]: Auto like Post Timeline
-¤ [album→ ]
-¤ [album merit→ "id"]
-¤ [album remove→ "id"]tact:on]
+¤ [album ]
+¤ [album merit "id"]
+¤ [album remove "id"]tact:on]
 ¤ [Rgroups]: Reject spam invitation groups
-¤ [Auto add message→ "text"]
+¤ [Auto add message "text"]
 ¤ [Auto add message confirm]
 ¤ [Clock:on/off]
 ¤ [Clock  "text"︎]
 ¤ [Update]: Update clock
 ¤ [Update status]: Update your profile status message
 ¤ [Comment confirm]
-¤ [Comment→ "text"]
+¤ [Comment "text"]
 ¤ [Comment bl add]
 ¤ [Comment bl del]
 ¤ [Comment bl confirm]
@@ -67,7 +67,7 @@ helpMessage ="""
 ¤ [Invite [mid]]Invite by mid people
 ¤ [Gn "the group name"]
 ¤ [Gurl]
-¤ [gurl merit→"the group ID"]
+¤ [gurl merit"the group ID"]
 ¤ [Nk "the name/tag"]
 ¤ [Kick: "mid"]
 ¤ [Fuck "Tag"]
@@ -140,9 +140,9 @@ wait = {
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':False,
-    'message':"Thanks for add me\ncreated by : ✍ŤẸÃϻ Ж ĤÃЌβỖŤ✈",
+    'message':"Thanks for add me",
     "lang":"JP",
-    "comment":"Thanks for add me\ncreated by : ✍ŤẸÃϻ Ж ĤÃЌβỖŤ✈",
+    "comment":"Thanks for add me",
     "commentOn":False,
     "commentBlack":{},
     "wblack":False,
