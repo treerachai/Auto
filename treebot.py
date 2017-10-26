@@ -75,7 +75,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
 ¤ [Kill]
 ¤ [Url open]
 ¤ [Url close]
-_________________________________________________________
+
   ¤¤ Command for kicker ¤¤
   
 ¤ [Kicker]: All kicker join
@@ -89,7 +89,7 @@ _________________________________________________________
 ¤ [K1 gn "the group name"]: K1/K2
 ¤ [K1 upstatus]: Kicker update profile status message
 ¤ [K1/K2/K3 rgroups]: Kicker reject spam invitation groups
-_________________________________________________________
+
   ¤¤ Auto Setting Command ¤¤
   
 ¤ [Contact:on/off]
@@ -97,7 +97,7 @@ _________________________________________________________
 ¤ [Share:on/off]
 ¤ [Comment:on/off]
 ¤ [Auto join:on/off]
-_________________________________________________________
+
   ¤¤ Protection ¤¤
   
 ¤ [Protect:on/off]
