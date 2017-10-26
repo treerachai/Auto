@@ -1691,7 +1691,7 @@ def bot(op):
                                     cl.sendText(msg.to,"error")
 #------------------------------------------------#
     #-------------Fungsi Tag All Start---------------#
-            elif msg.text in ["Tr","tr","แทก"]:
+            elif msg.text in ["Tagall","Tag all","แทก"]:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
 
