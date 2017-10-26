@@ -31,7 +31,7 @@ helpMessage =""" [Tree] BOT Menu V.3  􀔃􀄆red check mark􏿿
 ¤ Tagall   [Mention All User]
 ¤ Banlist  [Check List Accoun Banned]
 ¤ Gn namegroup [Replace Name Group]
-¤ Cancel  [Cancel User Sign in Group]
+¤ Cancel  [Cancel invite Group]
 ¤ Set View  [Check Privacy Group]
 ¤ Open Url  [Open Url Group]
 ¤ Close Url [Close Url Group]
