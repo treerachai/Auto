@@ -37,28 +37,28 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 helpMessage ="""Ŧяәәƅoŧ v2.1      
   
-¤ Id  = "Check Id"
-¤ Mid =
-¤ All mid =
-¤ Me =
-¤ K1/K2/K3/ = "Contact"
-¤ K1/K2/K3 fuck: = "Kick kicker"
-¤ Group Id = "Id Me Group"
-¤ TL : "Text" = "Auto status TL"
-¤ Clock :  = "Name Clock"
-¤ Up clock = "Up date Clock"
+¤ Id  = [Check Account]
+¤ Mid = [Check Accoun Mid]
+¤ All mid = [Check AllbAccoun Mid]
+¤ Me = [Check Account Own]
+¤ K1/K2/K3/K4 = [Contact]
+¤ K1/K2/K3/K4 fuck: = [Kick kicker]
+¤ Group Id = [Id Me Group]
+¤ TL : "Text" = [Auto status TL]
+¤ Clock :  = [Name Clock]
+¤ Up clock = [Up date Clock]
 ¤ Name : 'text' = "Name me"
-¤ MIC : "mid" = "Contact share"
-¤ Reject  : " invite" = "Reject invite"
-¤ Massage add: "text" = 
-¤ Add confirmasi :
-¤ Comment set : "Text" =
-¤ Comment check =
-¤ Clock: on = "Clock name on"
-¤ Clock: off = "Clock name off"
-¤ Ban = "Add blacklist"
-¤ Unban = "Dalate blacklist"
-¤ Banlist = "Check blacklist"
+¤ MIC : "mid" = [Contact share]
+¤ Reject  : " invite" = [Reject invite]
+¤ Massage add: "text" = [Add Massage]
+¤ Add confirmasi = [Add Confirm ]
+¤ Comment set : "Text" = [Set text]
+¤ Comment check = [Check text]
+¤ Clock: on = [Clock name on]
+¤ Clock: off = [Clock name off]
+¤ Ban = [Add blacklist]
+¤ Unban = [Dalete blacklist]
+¤ Banlist = [Check blacklist]
 
 -⚠™[ƧЄƬ]:ƇƠMMƛƝƊƧ ƧЄƬ. -
 ¤ Contact: on/off 
@@ -71,26 +71,26 @@ helpMessage ="""Ŧяәәƅoŧ v2.1
 ¤ Auto like: on/off
 	
 -⚠™ƇƠMMƛƝƊƧ ƖƝ ƬHЄ ƓƦƠƲƤƧ. ~~~~
-¤ Ban " @Tag
-¤ Unban " @Tag
-¤ Urlon  = "Open urL"
-¤ Urloff = "Closed urL"
-¤ Url = " Check urL room"
-¤ Ginfo = "data room"
-¤ Invite: "mid" 
-¤ Say: "Text" = "Kicker talk"
-¤ Cancel = "Cancel invite"
-¤ Gn: "name" = "Change name Group"
+¤ Ban   =[Banned Target]
+¤ Unban =[Unbann Target]
+¤ Urlon  = [Open urL]
+¤ Urloff = [Closed urL]
+¤ Url = [Check urL room]
+¤ Ginfo = [data room]
+¤ Invite: "mid" =[Invite Via Mid]
+¤ Say: "Text" = [Kicker talk]
+¤ Cancel = [Cancel invite]
+¤ Gn: "name" = [Change name Group]
 ¤ NK: "Name" =
 ¤ Dead = "Kick Blacklist"
 
 """
 helpMessage2 ="""-⚠™ -
 
-¤ ƤƦƠƬЄƇƬ: ƠƝ/ƠƑƑ
-¤ ƁԼƠƇƘ ƲƦԼ: ƠƝ/ƠƑƑ
-¤ ƝƛMЄԼƠƇƘ: ƠƝ/ƠƑƑ
-¤ ƁԼƠƇƘƖƝƔƖƬЄ: ƠƝ/ƠƑƑ  
+¤ Protect: on/off
+¤ Block url: on/off
+¤ Namelock: on/off
+¤ BlockInvite: on/off  
 	
 """
 KAC = [cl,ki,kk,ks,kc,ka]
@@ -1302,44 +1302,44 @@ def bot(op):
 #-----------------------------------------------------------
             elif "Protect:on" == msg.text:
 				if msg.to in protection:
-					cl.sendText(msg.to,"ƛԼƦЄƛƊƳ ƠƝ")
+					cl.sendText(msg.to,"Already on")
 				else:
 					wait["pnharfbot"][msg.to] = cl.getGroup(msg.to).name
 					f=codecs.open('pnharfbot.json','w','utf-8')
 					json.dump(wait["pnharfbot"], f, sort_keys=True, indent=4,ensure_ascii=False)
 					protection.append(msg.to)
-					cl.sendText(msg.to,"ƬƲƦƝЄƊ ƠƝ")
+					cl.sendText(msg.to,"Turn on")
             elif "Protect:off" == msg.text:
 				try:
 					if msg.from_ in Administrator:
 						protection.remove(msg.to)
-						cl.sendText(msg.to,"ƬƲƦƝЄƊ ƠƑƑ")
+						cl.sendText(msg.to,"Turn off")
 					else:
-						cl.sendText(msg.to,"ƛԼƦЄƛƊƳ ƠƑƑ")
+						cl.sendText(msg.to,"Already off")
 				except:
 					pass
             elif "Namelock:on" in msg.text:
                 if msg.to in wait['pname']:
-                    cl.sendText(msg.to,"ƬƲƦƝЄƊ ƠƝ.")
+                    cl.sendText(msg.to,"Turn on.")
                 else:
-                    cl.sendText(msg.to,"ƛԼƦЄƛƊƳ ƠƝ")
+                    cl.sendText(msg.to,"Already on")
                     wait['pname'][msg.to] = True
                     wait['pro_name'][msg.to] = cl.getGroup(msg.to).name
             elif "Namelock:off" in msg.text:
                 if msg.to in wait['pname']:
-                    cl.sendText(msg.to,"ƬƲƦƝ ƠƑƑ.")
+                    cl.sendText(msg.to,"Turn off.")
                     del wait['pname'][msg.to]
                 else:
-                    cl.sendText(msg.to,"ƛԼƦЄƛƊƳ ƠƑƑ")
+                    cl.sendText(msg.to,"Already off")
 					
             elif "Blockinvite:on" == msg.text:
 				gid = msg.to
 				autocancel[gid] = "poni"
-				cl.sendText(msg.to,"ƤƦƠƬЄƇƬ ƖƝƔƖƬƛƬƖƠƝ ƠƝ")
+				cl.sendText(msg.to,"Protect invite on")
             elif "Blockinvite:off" == msg.text:
 				try:
 					del autocancel[msg.to]
-					cl.sendText(msg.to,"ƤƦƠƬЄƇƬ ƖƝƔƖƬƛƬƖƠƝ ƠƑƑ")
+					cl.sendText(msg.to,"Protect invite off")
 				except:
 					pass                                 
 #-----------------------------------------------------------
@@ -1356,7 +1356,7 @@ def bot(op):
                 gs = cl.getGroup(msg.to)
                 for g in gs.members:
                     if _nametarget == g.displayName:
-                       cl.sendText(msg.to,"ƠƬƜ ƧƤƛM ƬƛƦƓЄƬ 😂")
+                       cl.sendText(msg.to,"Ŧяәәƅoŧ Spam")
                        ki.sendText(g.mid,"Spam  😂")  
                        kk.sendText(g.mid,"Spam  😂")  
                        ks.sendText(g.mid,"Spam  😂")
@@ -1390,9 +1390,9 @@ def bot(op):
                        ki.sendText(g.mid,"Spam  😂")
                        kk.sendText(g.mid,"Spam  😂")
                        ks.sendText(g.mid,"Spam  😂")
-                       kc.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ka.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ks.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
+                       kc.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ka.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ks.sendText(g.mid,"Ŧяәәƅoŧ  😂")
                        ks.sendText(g.mid,"Spam  😂")
                        kc.sendText(g.mid,"Spam  😂")
                        ka.sendText(g.mid,"Spam  😂")
@@ -1424,9 +1424,9 @@ def bot(op):
                        ki.sendText(g.mid,"Spam  😂")
                        kk.sendText(g.mid,"Spam  😂")
                        ks.sendText(g.mid,"Spam  😂")
-                       kc.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ka.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ks.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
+                       kc.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ka.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ks.sendText(g.mid,"Ŧяәәƅoŧ  😂")
                        ks.sendText(g.mid,"Spam  😂")
                        kc.sendText(g.mid,"Spam  😂")
                        ka.sendText(g.mid,"Spam  😂")
@@ -1458,9 +1458,9 @@ def bot(op):
                        ki.sendText(g.mid,"Spam  😂")
                        kk.sendText(g.mid,"Spam  😂")
                        ks.sendText(g.mid,"Spam  😂")
-                       kc.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ka.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ks.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
+                       kc.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ka.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ks.sendText(g.mid,"Ŧяәәƅoŧ  😂")
                        ks.sendText(g.mid,"Spam  😂")
                        kc.sendText(g.mid,"Spam  😂")
                        ka.sendText(g.mid,"Spam  😂")
@@ -1492,27 +1492,27 @@ def bot(op):
                        ki.sendText(g.mid,"Spam  😂")
                        kk.sendText(g.mid,"Spam  😂")
                        ks.sendText(g.mid,"Spam  😂")
-                       kc.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ka.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       cl.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ki.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       kk.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       ks.sendText(g.mid,"HƛHƛHƛ ƊƖ ƧƤƛM  😂")
-                       cl.sendText(msg.to, "ƊƠƝЄ ƧƤƛM  😂")
+                       kc.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ka.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       cl.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ki.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       kk.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       ks.sendText(g.mid,"Ŧяәәƅoŧ  😂")
+                       cl.sendText(msg.to, "Done spam 😂")
                        print "Done spam" 
 #-----------------------------------------------------------
             elif msg.text in ["PING","Ping","ping"]:
-                ki.sendText(msg.to,"ƤƠƝƓ 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"ƤƠƝƓ 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                ks.sendText(msg.to,"ƤƠƝƓ 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                ks.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
 #----------------------------------------------------------
             elif msg.text in ["Respon","respon","responsename"]:
-                cl.sendText(msg.to,"ƊƛƑƬƛƦ ƛƘƲƝ ƁƠƬ ԼƖƝЄ Ɣ.2.1 👇👇")
-                ki.sendText(msg.to,"ƁƠƬ ԼƖƝЄ 1")
-                kk.sendText(msg.to,"ƁƠƬ ԼƖƝЄ 2")
-                ks.sendText(msg.to,"ƁƠƬ ԼƖƝЄ 3")	
-                kc.sendText(msg.to,"ƁƠƬ ԼƖƝЄ 4")
-                ka.sendText(msg.to,"ƁƠƬ ԼƖƝЄ 5")
+                cl.sendText(msg.to,"Ŧяәәƅoŧ v2.1")
+                ki.sendText(msg.to,"Ŧяәәƅoŧ 1")
+                kk.sendText(msg.to,"Ŧяәәƅoŧ 2")
+                ks.sendText(msg.to,"Ŧяәәƅoŧ 3")	
+                kc.sendText(msg.to,"Ŧяәәƅoŧ 4")
+                ka.sendText(msg.to,"Ŧяәәƅoŧ 5")
 #----------------------------------------------------------
             elif msg.text == "Setlastpoint":
               if msg.from_ in admin:
