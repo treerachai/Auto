@@ -1690,8 +1690,8 @@ def bot(op):
                                 except:
                                     cl.sendText(msg.to,"error")
 #------------------------------------------------#
-#-------------Fungsi Tag All Start---------------#
-            elif msg.text in ["Tagall","Tag all","tagall","แท็ก"]:
+    #-------------Fungsi Tag All Start---------------#
+            elif msg.text in ["Tr","tr","แทก"]:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
 
@@ -1717,6 +1717,22 @@ def bot(op):
                       cl.sendMessage(msg)
                   except Exception as error:
                       print error
+    #-------------Fungsi Tag All Finish---------------#
+            elif "Tagall" in msg.text:
+                group = cl.getGroup(msg.to)
+                k = len(group.members)//100
+                for j in xrange(k+1):
+                    msg = Message(to=msg.to)
+                    txt = u''
+                    s=0
+                    d=[]
+                    for i in group.members[j*100 : (j+1)*100]:
+                        d.append({"S":str(s), "E" :str(s+8), "M":i.mid})
+                        s += 9
+                        txt += u'@Krampus\n'
+                    msg.text = txt
+                    msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
+                    cl.sendMessage(msg) 
 #-------------------------------------------------------------------#
         if op.type == 19:
             try:
