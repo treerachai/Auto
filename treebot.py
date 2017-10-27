@@ -10,16 +10,16 @@ import os.path,sys,urllib,shutil,subprocess
 
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
+cl.login(token='Emv7c3pI8mrsM0EaVhkd.LiLWAKx894VQb2XRD+CgFq.XpTIF5mzd6bp0otAuMdttp1C6aPEk1oFE/EWTmKFKPI=')
 cl.loginResult()
 ki = LINETCR.LINE()
-ki.login(qr=True)
+ki.login(token='Ema0OBVIw9TdyQJLkTD2.ZyHRuY9ygQtEMk9yMhgtKG.FIqUXPP2EKi4A7UmYYQhVNxnPoR6QgB0JZk5Id0FNho=')
 ki.loginResult()
 kk = LINETCR.LINE()
-kk.login(qr=True)
+kk.login(token='EmucJ3sLleHxRTTiSNBd.RaMZnar2i707okve5vqb7q.6JKhWgaUtQxRrF3XF+Q6g84vgS2oWrfdShey9srDsH8=')
 kk.loginResult()
 ks = LINETCR.LINE()
-ks.login(qr=True)
+ks.login(token='EmSO5gmc6EPSlUNQkzj9.g/AcCEjeHt1+wAX5w8cVMq.1QV3Q9UpciQ3V/hmE1PP5ezKtgsUH0iA/kBfepyrldI=')
 ks.loginResult()
 print u"login success"
 reload(sys)
@@ -29,81 +29,82 @@ c_text = """this is autolike """
 
 helpMessage ="""Ŧяәәƅoŧ v2.2 
 			 
-¤ [Id]
-¤ [Mid]
-¤ [Me]
-¤ [Tl "text"]
-¤ [Bye bye]: You left the group
-¤ [Cn "text"] 
-¤ [Gift] 
-¤ [Mc "mid"]: convert mid to contact
-¤ [Groups]
-¤ [Like:on/off]: Auto like Post Timeline
-¤ [album ]
-¤ [album merit "id"]
-¤ [album remove "id"]tact:on]
-¤ [Rgroups]: Reject spam invitation groups
-¤ [Auto add message "text"]
-¤ [Auto add message confirm]
-¤ [Clock:on/off]
-¤ [Clock  "text"︎]
-¤ [Update]: Update clock
-¤ [Update status]: Update your profile status message
-¤ [Comment confirm]
-¤ [Comment "text"]
-¤ [Comment bl add]
-¤ [Comment bl del]
-¤ [Comment bl confirm]
-¤ [Ban]
-¤ [Set]: Show your Auto setting
-¤ [Unban]
-¤ [Banlist]
-¤ [Check banlist]
-¤ [Check mbl]
-¤ [Ginfo]
-¤ [Groups]
-¤ [Cancel]
-¤ [Clean]
-¤ [Tagall] Mention All User
-¤ [Invite [mid]]Invite by mid people
-¤ [Gn "the group name"]
-¤ [Gurl]
-¤ [gurl merit"the group ID"]
-¤ [Nk "the name/tag"]
-¤ [Kick: "mid"]
-¤ [Fuck "Tag"]
-¤ [Kill]
-¤ [Url open]
-¤ [Url close]
+¤ Id
+¤ Mid
+¤ Me
+¤ Tl "text"
+¤ Bye bye = You left the group
+¤ Cn "text" 
+¤ Gift 
+¤ Mc "mid"  [convert mid to contact]
+¤ Groups
+¤ Like:on/off  [Auto like Post Timeline]
+¤ album 
+¤ album merit "id"
+¤ album remove "id" [tact:on]
+¤ Rgroups [Reject spam invitation groups]
+¤ Auto add message "text"
+¤ Auto add message confirm
+¤ Clock:on/off
+¤ Clock  "text"︎
+¤ Update  [Update clock]
+¤ Update status [Update your profile status message]
+¤ Comment confirm
+¤ Comment "text"
+¤ Comment bl add
+¤ Comment bl del
+¤ Comment bl confirm
+¤ Set [Show your Auto setting]
+¤ Ban
+¤ Unban
+¤ Banlist
+¤ Check banlist
+¤ Check mbl
+¤ Ginfo
+¤ Groups
+¤ Cancel
+¤ Clean
+¤ Speedbot
+¤ Tagall [Mention All User]
+¤ Invite [mid] [Invite by mid people]
+¤ Gn "the group name"
+¤ Gurl
+¤ gurl merit"the group ID"
+¤ Nk "the name/tag"
+¤ Kick: "mid"
+¤ Fuck "Tag"
+¤ Kill
+¤ Url open
+¤ Url close
 
   ¤¤ Command for kicker ¤¤
   
-¤ [Kicker]: All kicker join
-¤ [K1 gift]: K1,k2,k3 if you have much kicker
-¤ [K1/K2/K3 join]: Kicker join one by one
-¤ [K1 rename: "text"]
-¤ [Bye]: All kicker Leave
-¤ [K1/K2K3 @bye]: Kicker leave one by one
-¤ [K1/K2/K3 fuck "Tag"]: K1/K2 kick people
-¤ [K1 invite [mid]]: Kicker invite by mid people
-¤ [K1 gn "the group name"]: K1/K2
-¤ [K1 upstatus]: Kicker update profile status message
-¤ [K1/K2/K3 rgroups]: Kicker reject spam invitation groups
+¤ Kicker  [All kicker join]
+¤ K1 gift [K1,k2,k3 if you have much kicker]
+¤ K1/K2/K3 join [Kicker join one by one]
+¤ K1 rename: "text"
+¤ Bye  [All kicker Leave]
+¤ K1/K2K3 @bye [Kicker leave one by one]
+¤ K1/K2/K3 fuck "Tag" [K1/K2 kick people]
+¤ K1 invite [mid]] [Kicker invite by mid people]
+¤ K1 gn "the group name" [K1/K2/K3]
+¤ K1 upstatus [Kicker update profile status message]
+¤ K1/K2/K3 rgroups [Kicker reject spam invitation groups]
 
   ¤¤ Auto Setting Command ¤¤
   
-¤ [Contact:on/off]
-¤ [Auto add:on/off]
-¤ [Share:on/off]
-¤ [Comment:on/off]
-¤ [Auto join:on/off]
+¤ Contact:on/off
+¤ Auto add:on/off
+¤ Share:on/off
+¤ Comment:on/off
+¤ Auto join:on/off
 
   ¤¤ Protection ¤¤
   
-¤ [Protect:on/off]
-¤ [Namelock:on/off]
-¤ [Pro url:on/off]
-¤ [Blockinvite:on/off]
+¤ Protect:on/off
+¤ Namelock:on/off
+¤ Pro url:on/off
+¤ Blockinvite:on/off
 
 """
 KAC = [cl,ki,kk,ks]
@@ -112,7 +113,7 @@ Amid = ki.getProfile().mid
 kimid = kk.getProfile().mid
 ki2mid = ks.getProfile().mid
 Bots = [mid,Amid,kimid,ki2mid]
-admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"]
+admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"]
 me = cl.getProfile().mid
 bot1 = cl.getProfile().mid
 main = cl.getProfile().mid
@@ -125,10 +126,10 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"]
-Rx3 = ["uf0df255db02eaad40927284f5ccf5a7d"]
-Rx2 = ["ucd886b532f581aa4de98af5898719392"]
-Rx1 = ["u9489706a45fcf78bea076c6b77f7067d"]
+admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"]
+Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
+Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
+Rx1 = ["ucd886b532f581aa4de98af5898719392"]
 Administrator = admins + Rx3 + Rx2 + Rx1
 AS = Rx2 + Rx1 + Rx3
 adminsA = admins + Rx3
@@ -1256,7 +1257,7 @@ def bot(op):
 
 
             elif "Mk:" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1299,7 +1300,7 @@ def bot(op):
                     else:
                         pass
             elif msg.text in ["Nk "]:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1341,7 +1342,7 @@ def bot(op):
                     else:
                         pass
             elif "Fuck" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1393,7 +1394,7 @@ def bot(op):
 									ki.kickoutFromGroup(msg.to, [target])							   
 									pass	
             elif "K2 fuck" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1420,7 +1421,7 @@ def bot(op):
 									pass
 
             elif "K3 fuck" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1508,9 +1509,9 @@ def bot(op):
                             cl.updateGroup(group)
                     except:
                         cl.sendText(msg.to,"Error")
-            elif "album→" in msg.text:
+            elif "album" in msg.text:
                 try:
-                    albumtags = msg.text.replace("album→","")
+                    albumtags = msg.text.replace("album","")
                     gid = albumtags[:6]
                     name = albumtags.replace(albumtags[:34],"")
                     cl.createAlbum(gid,name)
@@ -1626,13 +1627,20 @@ def bot(op):
                 ki.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
                 ks.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-#-----------------------------------------------
+#---------------------------------------------------------#
             elif msg.text in ["Responsename","respon"]:
                 ki.sendText(msg.to,"K1")
                 kk.sendText(msg.to,"K2")
                 ks.sendText(msg.to,"K3")
-#-----------------------------------------------
-#-----------------------------------------------
+#---------------------------------------------------------#	
+#-------------Fungsi Speedbot Start-----------------------#
+            elif msg.text in ["Speedbot","speedbot","Speed","Sp"]:
+                start = time.time()
+                cl.sendText(msg.to, "Waitting...")
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+#-------------Fungsi Speedbot Finish----------------------#
+#---------------------------------------------------------#
             elif "Ban " in msg.text:
                if msg.toType == 2:
                     if msg.from_ in admin:                                        
@@ -1658,13 +1666,13 @@ def bot(op):
                                     cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
                                 except:
                                     cl.sendText(msg.to,"error")
-#-----------------------------------------------------------
+#-----------------------------------------------------------#
             elif "MB:" in msg.text:
                 midd = msg.text.replace("MB:","")
                 wait["blacklist"][midd] = True
                 f=codecs.open('st2__b.json','w','utf-8')
                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-#-----------------------------------------------------------
+#-----------------------------------------------------------#
             elif "Unban " in msg.text:
                if msg.toType == 2:
                     if msg.from_ in admin:                                        
@@ -1690,8 +1698,8 @@ def bot(op):
                                     cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
                                 except:
                                     cl.sendText(msg.to,"error")
-#------------------------------------------------#
-    #-------------Fungsi Tag All Start---------------#
+#--------------------------------------------------------#
+#---------------------Fungsi Tag All Start---------------#
             elif msg.text in ["tagall","tag all","แทก","แท็ก"]:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
@@ -1718,7 +1726,7 @@ def bot(op):
                       cl.sendMessage(msg)
                   except Exception as error:
                       print error
-    #-------------Fungsi Tag All Finish---------------#
+#--------------------Fungsi Tag All Finish--------------------#
             elif "Tagall" in msg.text:
                 group = cl.getGroup(msg.to)
                 k = len(group.members)//100
