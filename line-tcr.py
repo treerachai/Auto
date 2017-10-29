@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """this is autolike """
 
-helpMessage ="""Ŧяәәƅoŧ v2.2 
+helpMessage ="""Ŧяәәƅoŧ v2.3 
 			 
 ¤ Id
 ¤ Mid
@@ -133,7 +133,7 @@ wait = {
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':False,
+    'timeline':true,
     'autoAdd':False,
     'message':"Thanks for add me",
     "lang":"JP",
@@ -146,10 +146,10 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-	"pnharfbot":{},
+    "pnharfbot":{},
     "pname":{},
     "pro_name":{},
-	"posts":True,
+     "posts":True,
 	}
 	
 wait2 = {
