@@ -196,9 +196,9 @@ def bot(op):
                             u = "close"
                         else:
                             u = "open"
-                        cl.sendText(msg.to,"[Nama Grup]\n" + str(ginfo.name) + "\n[Group ID]\n" + msg.to + "\n[Pembuat Group]\n" + gCreator + "\n[Status Profil]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\nJumlah Member : " + str(len(ginfo.members)) + "Member\nMember Pending : " + sinvitee + "Member\nQR Link :" + u + " ")
+                        cl.sendText(msg.to,"[Name Grup]\n" + str(ginfo.name) + "\n[Group ID]\n" + msg.to + "\n[Creator Group]\n" + gCreator + "\n[Status Profil]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\nJumlah Member : " + str(len(ginfo.members)) + "Member\nMember Invite : " + sinvitee + "Member\nQR Link :" + u + " ")
                     else:
-                        cl.sendText(msg.to,"[Nama Grup]\n" + str(ginfo.name) + "\n[Group ID]\n" + msg.to + "\n[Pembuat Group]\n" + gCreator + "\n[Status Profil]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
+                        cl.sendText(msg.to,"[Name Grup]\n" + str(ginfo.name) + "\n[Group ID]\n" + msg.to + "\n[Creator Group]\n" + gCreator + "\n[Status Profil]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
                 else:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Tidak Bisa Digunakan Diluar Grup")
