@@ -6,7 +6,7 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,base64
 
 cl = LINETCR.LINE()
-print u"""login start"""
+print u"login start"
 cl.login(qr=True)
 cl.loginResult()
 ks = ki = kk = kc = cl 
@@ -14,7 +14,6 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 print u"login success"
-
 KAC=[cl,ki,kk,kc,ks]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
@@ -23,7 +22,7 @@ Cmid = kc.getProfile().mid
 Dmid = ks.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
-admin=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
+admin=["ucd886b532f581aa4de98af5898719392"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -57,7 +56,7 @@ wait2 = {
 setTime = {}
 setTime = wait2['setTime']
 
-
+#-------------------------------------------------------------------------#   
 def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes = Message()
     mes.to, mes.from_ = to, profile.mid
@@ -66,8 +65,7 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     if to not in messageReq:
         messageReq[to] = -1
     messageReq[to] += 1
-
-#---------------------------[AutoLike]---------------------------#
+#-------------------------------------------------------------------------#   
 def autolike():
     count = 1
     while True:
@@ -91,7 +89,7 @@ def autolike():
 thread2 = threading.Thread(target=autolike)
 thread2.daemon = True
 thread2.start()
-#---------------------------[AutoLike]---------------------------#										
+#-------------------------------------------------------------------------# 
 def NOTIFIED_READ_MESSAGE(op):
     try:
         if op.param1 in wait2['readPoint']:
@@ -106,7 +104,7 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 
-#---------------------------------------------------------------#	
+#-------------------------------------------------------------------------#   
 def bot(op):
     try:
         if op.type == 0:
@@ -162,16 +160,51 @@ def bot(op):
                         X.preventJoinByTicket = True
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
-
-#---------------------------------------------------------------#	
+												
+                if op.param3 in Dmid:
+                    if op.param2 in mid:
+                        X = cl.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        cl.updateGroup(X)
+                        Ti = cl.reissueGroupTicket(op.param1)
+                        kc.acceptGroupInvitationByTicket(op.param1,Ti)
+                        X.preventJoinByTicket = True
+                        cl.updateGroup(X)
+                        Ti = cl.reissueGroupTicket(op.param1)		
+		
+#-------------------------------------------------------------------------#	
         if op.type == 25:
             msg = op.message
             if msg.text in ["Speed","speed","Sp","sp"]:
                     start = time.time()
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-#---------------------------------------------------------------#	
-#----------------------------[TAG ALL]--------------------------#WORK
+#-------------------------------------------------------------------------# 
+            if msg.text == "Ginfo":
+                if msg.toType == 2:
+                    ginfo = cl.getGroup(msg.to)
+                    try:
+                        gCreator = ginfo.creator.displayName
+                    except:
+                        gCreator = "Error"
+                    if wait["lang"] == "JP":
+                        if ginfo.invitee is None:
+                            sinvitee = "0"
+                        else:
+                            sinvitee = str(len(ginfo.invitee))
+                        if ginfo.preventJoinByTicket == True:
+                            u = "close"
+                        else:
+                            u = "open"
+                        cl.sendText(msg.to,"[Group Name]\n" + str(ginfo.name) + "\n[Group ID]\n" + msg.to + "\n[Group Maker]\n" + gCreator + "\n[Status Profil]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\nNumber of Members : " + str(len(ginfo.members)) + "Member\nMember Pending : " + sinvitee + "Member\nQR Link :" + u + " ")
+                    else:
+                        cl.sendText(msg.to,"[Group Name]\n" + str(ginfo.name) + "\n[Group ID]\n" + msg.to + "\n[Group Maker]\n" + gCreator + "\n[Status Profil]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
+                else:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Can not Be Used Outside of Group")
+                    else:
+                        cl.sendText(msg.to,"Can not Be Used Outside of Group")							
+#-------------------------------[TAG ALL]---------------------------------#WORK
             if msg.text in ["Tagall"]:
 			    group = cl.getGroup(msg.to)
 			    nama = [contact.mid for contact in group.members]
@@ -193,7 +226,23 @@ def bot(op):
 			        kc.sendMessage(msg)
 			    except Exception as error:
 			        print error
-#----------------------------[TAG ALL]-------------------------------------#WORK
+#-------------------------------[TAG ALL]---------------------------------#WORK
+            elif "tagall" in msg.text:
+                group = cl.getGroup(msg.to)
+                k = len(group.members)//500
+                for j in xrange(k+1):
+                    msg = Message(to=msg.to)
+                    txt = u''
+                    s=0
+                    d=[]
+                    for i in group.members[j*500 : (j+1)*500]:
+                        d.append({"S":str(s), "E" :str(s+8), "M":i.mid})
+                        s += 9
+                        txt += u'@Krampus\n'
+                    msg.text = txt
+                    msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
+                    cl.sendMessage(msg) 
+#-------------------------------------------------------------------------#	
             elif "Comment set: " in msg.text:
                 c = msg.text.replace("Comment set: ","")
                 if c in [""," ","\n",None]:
@@ -226,8 +275,9 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"To turn off") 
             elif msg.text in ["Com","Comment check"]:
-                cl.sendText(msg.to,"Auto commenting is currently set as follows:\n\n" + str(wait["comment"]))												
+                cl.sendText(msg.to,"Auto commenting is currently set as follows:\n\n" + str(wait["comment"]))
 #-------------------------------------------------------------------------#	
+
         if op.type == 59:
             print op
 
@@ -235,7 +285,7 @@ def bot(op):
     except Exception as error:
         print error
 
-
+#-------------------------------------------------------------------------#   
 def a2():
     now2 = datetime.now()
     nowT = datetime.strftime(now2,"%M")
@@ -243,7 +293,7 @@ def a2():
         return False
     else:
         return True
-
+#-------------------------------------------------------------------------#   
 while True:
     try:
         Ops = cl.fetchOps(cl.Poll.rev, 5)
@@ -253,5 +303,6 @@ while True:
     for Op in Ops:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
-            bot(Op)           
-#------------------------------------------------------------------------#	         
+            bot(Op)
+            
+#-------------------------------------------------------------------------#            
