@@ -47,7 +47,7 @@ class Talk:
       crypt,
       True,
       '127.0.0.1',
-      'http://dg.b9dm.com/KoenoKatachi.mp4',
+      'treebot',
       cert
     )
 
