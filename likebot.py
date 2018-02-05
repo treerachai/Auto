@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 
-import STN
-from STN.lib.curve.ttypes import *
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,sys
 import re,string,os
 import os.path,sys,urllib,shutil,subprocess
 
 
-cl = STN.LINE()
-cl.login(token='authoken punya kalian')
+cl = LINETCR.LINE()
+cl.login(token='authoken')
 cl.loginResult()
 
-print u"PRANK BOTLIKE SUCCESS LOGIN"
+print u"BOTLIKE SUCCESS LOGIN"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
