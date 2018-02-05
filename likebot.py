@@ -28,9 +28,9 @@ wait = {
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':False,
-    'message':"❂••••••••AUTO ADD••••••••❂\nhttps://line.me/R/ti/p/%40iya4481p\n『⊰์◉⊱ᎢᎬᎪᎷ ᏴᏞᎪᏟᏦ ❂Ғ ᏀᎪᎷᎬᎡ⊰์◉⊱』",
+    'message':"Thank You for Adding Me",
     "lang":"JP",
-    "comment1":"❂••••••••••••••••••••••••••❂\n https://line.me/R/ti/p/%40iya4481p\n『⊰์◉⊱ᎢᎬᎪᎷ ᏴᏞᎪᏟᏦ ❂Ғ ᏀᎪᎷᎬᎡ⊰์◉⊱』",
+    "comment1":"AutoLike",
     "commentOn":False,
     "commentBlack":{},
     "wblack":False,
@@ -101,7 +101,7 @@ def bot(op):
                             cl.sendText(msg.to,"error")
         if msg.contentType == 16:
             url = msg.contentMetadata["postEndUrl"]
-            cl.like(url[25:58], url[66:], likeType=1001)
+            cl.like(url[25:58], url[66:], likeType=1003)
             cl.comment(url[25:58], url[66:], wait["comment1"])
         if op.type == 26:
             msg = op.message
