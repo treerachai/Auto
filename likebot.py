@@ -12,7 +12,7 @@ cl = LINETCR.LINE()
 cl.login(token='authoken')
 cl.loginResult()
 
-print u"BOTLIKE SUCCESS LOGIN"
+print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -20,7 +20,7 @@ KAC = [cl]
 mid = cl.getProfile().mid
 
 Bots = [mid]
-admid= "mid kalian"
+admid= "mid"
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -30,7 +30,7 @@ wait = {
     'autoAdd':False,
     'message':"Thank You for Adding Me",
     "lang":"JP",
-    "comment1":"AutoLike",
+    "comment1":"AutoLike by ™Ŧяәәƅoŧ ",
     "commentOn":False,
     "commentBlack":{},
     "wblack":False,
