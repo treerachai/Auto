@@ -101,7 +101,7 @@ def bot(op):
                             cl.sendText(msg.to,"error")
         if msg.contentType == 16:
             url = msg.contentMetadata["postEndUrl"]
-            cl.like(url[25:58], url[66:], likeType=1003)
+            cl.like(url[25:58], url[66:], likeType=1001)
             cl.comment(url[25:58], url[66:], wait["comment1"])
         if op.type == 26:
             msg = op.message
